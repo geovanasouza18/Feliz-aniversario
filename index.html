@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz aniversário</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>  
 </head>
 <body>
     <h1>Feliz aniversário maninha!</h1>
 
     <button id="openButton">Clique para abrir</button>
 
-    <div id="contentContainer" style="display: none;">
-        <div class="photos left">
-            <img src="/img/foto1.jpg" class="floating-photo" alt="Foto da Irmã">
-            <img src="/img/foto2.jpg" class="floating-photo" alt="Foto da Irmã">
-        </div>
+    <div id="contentContainer" style="display: none;">        
         <div id="videoContainer">
             <video controls>
                 <source src="/video/video.mp4" type="video/mp4">
                 Seu navegador não suporta a tag de vídeo.
             </video>
         </div>
-        <div class="photos right">
-            <img src="/img/foto3.jpg" class="floating-photo" alt="Foto da Irmã">
-            <img src="/img/foto4.jpg" class="floating-photo" alt="Foto da Irmã">
+    
+        <div class="timeline">
+            <img class="floating-photo" src="/img/foto1.jpg" alt="foto 1">
+            <img class="floating-photo" src="/img/foto2.jpg" alt="Foto 2">
+            <img class="floating-photo" src="/img/foto3.jpg" alt="Foto 3">
+            <img class="floating-photo" src="/img/foto4.jpg" alt="Foto 3">
+            <img class="floating-photo" src="/img/foto5.jpg" alt="Foto 3">
+            <img class="floating-photo" src="/img/foto6.jpg" alt="Foto 3">
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
-    <script src="scripts.js"></script>
+    
 </body>
 </html>

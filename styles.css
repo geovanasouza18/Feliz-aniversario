@@ -1,8 +1,9 @@
-.body {
+body {
     background: linear-gradient(287.56deg, #bb00ff 0%, #870874 100%);
     font-size: 1.6rem;
     display: grid;
     place-items: center;
+    margin: 0;
 }
 
 h1 {
@@ -10,6 +11,8 @@ h1 {
     font-size: 3.1rem;
     font-family: "Montserrat", sans-serif;
     animation: pulse 2s infinite;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 button {
@@ -24,41 +27,37 @@ button {
 
 #contentContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap; /* Permitir que as fotos quebrem a linha conforme necessário */
-    margin-top: 10px;
+    margin-top: 50px; /* Ajusta o conteúdo para cima */
 }
 
 #videoContainer {
     margin: 0 20px;
-    margin-top: -200px;
+    margin-top: -70px;
 }
 
-.photos {
+.timeline {
     display: flex;
-    padding: 100px;
-    margin-top: -135px;
-    overflow-x: auto; /* Permitir rolagem horizontal se houver muitas fotos */
-    max-width: 100%; /* Garantir que as fotos não excedam a largura máxima */
+    gap: 20px;
+    align-items: center;
+    margin-top: -20px;
+    overflow-x: auto; /* Habilita rolagem horizontal para dispositivos menores */
+    padding: 20px 10px; /* Reduz o preenchimento horizontal em dispositivos menores */
+    width: 100%; /* Garante que a .timeline ocupa a largura total do dispositivo */
 }
 
 .floating-photo {
-    width: 250px;
-    height: 280px;
-    object-fit: cover;
-    margin: 10px;
-    animation: float 3s infinite;
+    width: 300px; /* Largura fixa para todas as imagens */
+    height: 280px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    margin: 0 10px; /* Espaçamento horizontal entre as fotos */
+    animation: float 6s linear infinite; /* Mantém a animação de flutuação */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    height: auto; /* Permite ajuste automático da altura para manter a proporção */
 }
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-600%); } /* Move as fotos para a esquerda */
 }
