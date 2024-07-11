@@ -1,23 +1,21 @@
-body {
+.body {
     background: linear-gradient(287.56deg, #bb00ff 0%, #870874 100%);
-    font-size: 1.6rem; /* Pode ajustar conforme necessário */
+    font-size: 1.6rem;
     display: grid;
     place-items: center;
-    height: 100vh; /* Ocupa toda a altura da viewport */
-    margin: 0; /* Remove margens padrão do body */
 }
 
 h1 {
     color: #f6d0f0;
-    font-size: 3.1rem; /* Pode ajustar conforme necessário */
+    font-size: 3.1rem;
     font-family: "Montserrat", sans-serif;
-    animation: pulse 2s infinite; /* Aplica a animação 'pulse' por tempo indefinido */
+    animation: pulse 2s infinite;
 }
 
 button {
     display: block;
     margin: 20px auto;
-    font-size: 1.6rem; /* Tamanho da fonte ajustado */
+    font-size: 20px;
     padding: 10px 20px;
     cursor: pointer;
     border-color: #623772;
@@ -28,44 +26,39 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
-    margin-top: 20px; /* Margem ajustada conforme necessário */
+    flex-wrap: wrap; /* Permitir que as fotos quebrem a linha conforme necessário */
+    margin-top: 10px;
 }
 
 #videoContainer {
     margin: 0 20px;
-    margin-top: -10vh; /* Ajuste conforme necessário para o posicionamento */
+    margin-top: -200px;
 }
 
 .photos {
     display: flex;
-    flex-direction: column;
-    padding: 5vw; /* Padding ajustado para ser responsivo */
-    margin-top: -7.5vh; /* Ajuste conforme necessário para o posicionamento */
+    padding: 100px;
+    margin-top: -135px;
+    overflow-x: auto; /* Permitir rolagem horizontal se houver muitas fotos */
+    max-width: 100%; /* Garantir que as fotos não excedam a largura máxima */
 }
 
 .floating-photo {
-    width: 25vw; /* Largura ajustada para ser responsiva */
-    height: auto; /* Altura ajustada automaticamente */
-    object-fit: cover; /* Manter a proporção da imagem */
-    margin: 10px 0;
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+    margin: 10px;
     animation: float 3s infinite;
 }
 
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-1vh); } /* Ajuste conforme necessário */
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
