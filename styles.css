@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(287.56deg, #bb00ff 0%, #870874 100%);
+    font-size: 1.6rem; /* Pode ajustar conforme necessário */
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    margin: 0; /* Remove margens padrão do body */
+}
+
+h1 {
+    color: #f6d0f0;
+    font-size: 3.1rem; /* Pode ajustar conforme necessário */
+    font-family: "Montserrat", sans-serif;
+    animation: pulse 2s infinite; /* Aplica a animação 'pulse' por tempo indefinido */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    font-size: 1.6rem; /* Tamanho da fonte ajustado */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-color: #623772;
+    background-color: #e7c3e7;
+}
+
+#contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    margin-top: 20px; /* Margem ajustada conforme necessário */
+}
+
+#videoContainer {
+    margin: 0 20px;
+    margin-top: -10vh; /* Ajuste conforme necessário para o posicionamento */
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw; /* Padding ajustado para ser responsivo */
+    margin-top: -7.5vh; /* Ajuste conforme necessário para o posicionamento */
+}
+
+.floating-photo {
+    width: 25vw; /* Largura ajustada para ser responsiva */
+    height: auto; /* Altura ajustada automaticamente */
+    object-fit: cover; /* Manter a proporção da imagem */
+    margin: 10px 0;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-1vh); } /* Ajuste conforme necessário */
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
